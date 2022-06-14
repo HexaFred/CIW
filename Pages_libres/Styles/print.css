@@ -1,0 +1,80 @@
+@font-face {
+  font-family: StarJedi;
+  src: url(Starjedi.woff);
+}
+
+@page { margin :0;
+  border :none; }
+
+a {
+ text-decoration-line: none;
+ z-index: 10;
+}
+
+td{
+	padding-right:25px;
+}
+
+
+article{
+  display:flex;
+  justify-content: space-around;
+  font: 10pt OCR A Std, StarJedi;
+  z-index:2;
+}
+
+
+nav{
+    display:none;
+}
+
+
+body{
+  font: 10pt OCR A Std, StarJedi;
+  z-index:2;
+}
+
+
+img{
+  width: 190px;
+  height: 290px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+h1{
+	font: 20px OCR A Std, StarJedi;
+}
+
+h2 {
+  font: 15px OCR A Std, StarJedi;
+  margin-left: 5px;
+}
+
+p{
+	font-size: 9.25px;
+}
+
+#épisode {
+	font-family: monospace;
+}
+
+label{
+	display: none;
+}
+
+footer{
+  display: none;
+}
+
+input{
+  display: none;
+}
+
+#star {
+	display: none;
+}
+
+#libre{
+  display: none;
+}

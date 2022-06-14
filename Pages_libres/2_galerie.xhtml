@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Galerie</title>
+    <script type="text/javascript" src="./Scripts/galerie.js"></script>
+    <link rel="stylesheet" href="./Styles/style.css" media="screen" />
+    <link rel="stylesheet" href="./Styles/print.css" media="print"/>
+    <style>
+    </style>
+  </head>
+  <header>
+    <center><h1>Galerie</h1></center>
+  </header>
+    <nav><center>
+	<table>
+	<tr>
+    <td><a id="libre" href="../accueil.xhtml">
+      Accueil
+    </a></td>
+	<td><a id="libre" href="1_presentation.xhtml">
+      Présentation
+    </a></td>
+    <td><a id="libre" href="">
+      Galerie
+    </a></td>
+    <td><a id="libre" href="3_connexion.xhtml">
+     Connexion
+    </a></td>
+    <td><a id="imposée" href="../Page_imposee/Livre_Choisi/livre.xhtml">
+      Livre
+    </a></td>
+	</tr></table>
+	<table>
+	<tr>
+    <td>indication :</td>
+		<td id="libre">Page Libre</td>
+		<td id ="imposée">Page imposée</td>
+	</tr>
+	</table>
+  </center></nav>
+  <body oncontextmenu="changeCouleurDeFond()">
+	<h1>les affiches des différents épisodes de star wars</h1>
+    <p id="épisode" >Star Wars épisode <b id="id_quoi">I</b></p>
+    <p><img id="id_image" src="Images/Star Wars Episode 1.jpg" height="350px"/></p>
+    <label>Préologie</label>
+    <input type="button" value="Episode i" onclick="changeImageM1('Images/Star Wars Episode 1.jpg', 'I')"
+    />
+    <input type="button" value="Episode ii" onclick="changeImageM1('Images/Star Wars Episode 2.jpg', 'II')"
+    />
+	<input type="button" value="Episode iii" onclick="changeImageM1('Images/Star Wars Episode 3.jpg', 'III')"
+    />
+    <br/>
+    <label>Triologie originale</label>
+    <input type="button" value="Episode iv" onclick="changeImageM2('id_image', 'id_quoi', 'Images/Star Wars Episode 4.jpg', 'IV')"
+    />
+    <input type="button" value="Episode v" onclick="changeImageM2('id_image', 'id_quoi', 'Images/Star Wars Episode 5.jpg', 'V')"
+    />
+	<input type="button" value="Episode vi" onclick="changeImageM2('id_image', 'id_quoi', 'Images/Star Wars Episode 6.jpg', 'VI')"
+    />
+    <br/>
+    <label>Postologie</label>
+    <input type="button" value="Episode vii" onclick="changeImageM3('Images/Star Wars Episode 7.jpg', 'VII')"
+    />
+    <input type="button" value="Episode viii" onclick="changeImageM3('Images/Star Wars Episode 8.jpg', 'VIII')"
+    />
+	<input type="button" value="Episode ix" onclick="changeImageM3('Images/Star Wars Episode 9.jpg', 'IX')"
+    />
+ </body>
+
+  <script>
+  var bodyTag = document.body;
+  var p1Tag   = bodyTag.childNodes[3];
+  var bTag    = p1Tag.lastChild;
+  var p2Tag   = bodyTag.childNodes[5];
+  var imgTag  = p2Tag.firstChild;
+  </script>
+
+  <footer>
+    <center><a href="1_presentation.xhtml"><input type="button" value="Page Précédente"/></a>
+      <a href="3_connexion.xhtml"><input type="button" value="Page Suivante"/></a>
+    </center>
+  </footer>
+</html>

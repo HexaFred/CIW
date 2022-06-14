@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Connexion</title>
+  <link href="./Styles/connexion.css" rel="stylesheet" media="screen"/>
+  <link rel="stylesheet" href="./Styles/print.css" media="print"/>
+
+</head>
+  <nav><center>
+  <h1>connexion</h1>
+	<table>
+	<tr>
+    <td><a id="libre" href="../accueil.xhtml">
+      Accueil
+    </a></td>
+	<td><a id="libre" href="1_presentation.xhtml">
+      Présentation
+    </a></td>
+    <td><a id="libre" href="2_galerie.xhtml">
+      Galerie
+    </a></td>
+    <td><a id="libre" href="3_connexion.xhtml">
+     Connexion
+    </a></td>
+    <td><a id="imposée" href="../Page_imposee/Livre_Choisi/livre.xhtml">
+      Livre
+    </a></td>
+	</tr></table>
+	<table>
+	<tr>
+    <td>indication :</td>
+		<td id="libre">Page Libre</td>
+		<td id ="imposée">Page imposée</td>
+	</tr>
+	</table>
+  </center></nav>
+<center><body>
+  <form method="get" action="https://httpbin.org/get">
+    <fieldset><legend>identifiant</legend>
+    <input type="text" name="identifiant" id="input_identifiant"
+           onblur="valideIdentifiant()" />
+    </fieldset>
+    <fieldset><legend>Code d'accès</legend>
+    <div id="boutons_chiffres">
+      <button type="button" onclick="saisieChiffre(this)">0</button>
+      <button type="button" onclick="saisieChiffre(this)">1</button>
+      <button type="button" onclick="saisieChiffre(this)">2</button>
+      <button type="button" onclick="saisieChiffre(this)">3</button>
+      <button type="button" onclick="saisieChiffre(this)">4</button>
+      <button type="button" onclick="saisieChiffre(this)">5</button>
+      <button type="button" onclick="saisieChiffre(this)">6</button>
+      <button type="button" onclick="saisieChiffre(this)">7</button>
+      <button type="button" onclick="saisieChiffre(this)">8</button>
+      <button type="button" onclick="saisieChiffre(this)">9</button>
+    </div>
+    <br />
+    <div>
+      <input type="text" name="code" id="code_saisi" class="invisible"/>
+      <label for="code" id="code_affiché">000000</label>
+    </div>
+	<div>
+		<button type="button" onclick="supprimeChiffre()">Corriger</button>
+		<button type="button" onclick="videCode()">Recommencer</button>
+	</div>
+  </fieldset>
+  <br />
+  <fieldset><legend>Capcha</legend>
+    <div>
+      <label for="resultat" id="capcha_formule">3 - 4 = </label>
+      <input type="text" id="capcha_saisi" size="3" onblur="valideCaptcha()"/>
+      <button type="button" onclick="genereCapcha()">Nouveau</button>
+    </div>
+  </fieldset>
+    <br />
+    <button type="submit" onclick="return valideFormulaire();">Connexion</button>
+  </form>
+  <script type="text/javascript" src="./Scripts/connexion.js"></script>
+</body></center>
+
+<footer>
+  <center>
+    <a href="2_galerie.xhtml"><input type="button" value="Page Précédente"/></a>
+    <a href="../Page_imposee/Livre_Choisi/livre.xhtml"><input type="button" value="Page Suivante"/></a>
+  </center>
+</footer>
+
+</html>
